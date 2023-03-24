@@ -1,22 +1,53 @@
+import { useRef, useState } from "react";
+
 // Drei helpers
 import { OrbitControls } from "@react-three/drei";
 
 // Perf
 import { Perf } from "r3f-perf";
 
-function App() {
+// Animation
+import { useFrame, useThree } from "@react-three/fiber";
+
+// Three
+import * as THREE from "three";
+
+function Box({ z }) {
+  const ref = useRef();
+
+  // Get viewport width and height
+  const { viewport } = useThree();
+
+  // Set x position to random value
+  const [data] = useState({
+    x: THREE.MathUtils.randFloatSpread(2),
+    y: THREE.MathUtils.randFloatSpread(viewport.height),
+  });
+
+  useFrame((state) => {
+    // Set x position to random value according to viewport width
+    ref.current.position.set(data.x * viewport.width, (data.y += 0.1), z);
+
+    if (data.y > viewport.height / 1.5) {
+      data.y = -viewport.height / 1.5;
+    }
+  });
+
+  return (
+    <mesh ref={ref}>
+      <boxGeometry />
+      <meshBasicMaterial color="hotpink" />
+    </mesh>
+  );
+}
+
+function App({ count = 100 }) {
   return (
     <>
       <Perf position="top-left" />
-
-      <OrbitControls />
-
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <mesh rotation={[10, 15, 6]}>
-        <boxGeometry args={[2, 2, 2]} />
-        <meshStandardMaterial color="hotpink" />
-      </mesh>
+      {Array.from({ length: count }, (_, i) => (
+        <Box key={i} z={-i} />
+      ))}
     </>
   );
 }
