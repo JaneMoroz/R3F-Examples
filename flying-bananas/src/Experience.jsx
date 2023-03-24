@@ -1,7 +1,9 @@
 import { useRef, useState } from "react";
 
+import { useGLTF } from "@react-three/drei";
+
 // Drei helpers
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Environment } from "@react-three/drei";
 
 // Perf
 import { Perf } from "r3f-perf";
@@ -42,13 +44,22 @@ function Box({ z }) {
   );
 }
 
+// Banana
+function Banana(props) {
+  const { scene } = useGLTF("/public/banana-v1.glb");
+
+  return <primitive object={scene} {...props} />;
+}
+
 function App({ count = 100 }) {
   return (
     <>
       <Perf position="top-left" />
-      {Array.from({ length: count }, (_, i) => (
+      <Banana scale={0.5} />
+      <Environment preset="sunset" />
+      {/* {Array.from({ length: count }, (_, i) => (
         <Box key={i} z={-i} />
-      ))}
+      ))} */}
     </>
   );
 }
