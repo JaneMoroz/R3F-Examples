@@ -5,14 +5,14 @@ import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
 import { Environment } from "@react-three/drei";
 
 // Bananas
-import Bananas from "./Bananas";
+import Banana from "./Banana";
 
-function App({ count = 100, depth = 80 }) {
+function Experience({ count = 100, depth = 80, speed }) {
   return (
     <>
       <Environment preset="sunset" />
       {Array.from({ length: count }, (_, i) => (
-        <Bananas key={i} z={-(i / count) * depth - 20} />
+        <Banana key={i} z={-(i / count) * depth - 20} speed={speed} />
       ))}
       <EffectComposer multisampling={0}>
         <DepthOfField
@@ -26,4 +26,4 @@ function App({ count = 100, depth = 80 }) {
   );
 }
 
-export default App;
+export default Experience;

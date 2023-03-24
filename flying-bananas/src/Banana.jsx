@@ -8,7 +8,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 // Three
 import * as THREE from "three";
 
-const Bananas = ({ z }) => {
+const Banana = ({ speed, z }) => {
   const ref = useRef();
 
   const { nodes, materials } = useGLTF("/banana-v1-transformed.glb");
@@ -36,7 +36,7 @@ const Bananas = ({ z }) => {
     );
 
     // Set x position to random value according to viewport width
-    ref.current.position.set(data.x * width, (data.y += 0.025), z);
+    ref.current.position.set(data.x * width, (data.y += 0.025 * speed), z);
 
     if (data.y > height) {
       data.y = -height;
@@ -53,4 +53,4 @@ const Bananas = ({ z }) => {
   );
 };
 
-export default Bananas;
+export default Banana;
