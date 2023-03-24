@@ -15,7 +15,11 @@ import "./style.css";
 import Experience from "./Experience.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
+  <Canvas
+    gl={{ antialias: false }}
+    dpr={[1, 1.5]}
+    camera={{ near: 0.01, far: 110, fov: 30 }}
+  >
     <color attach="background" args={["#ffbf40"]} />
 
     {/* Perf */}
