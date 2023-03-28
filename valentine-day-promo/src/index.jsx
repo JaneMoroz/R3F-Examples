@@ -1,8 +1,7 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 
 // Drei helpers
-import { OrbitControls } from "@react-three/drei";
 
 // Perf
 import { Perf } from "r3f-perf";
@@ -17,30 +16,28 @@ import "./style.css";
 import Experience from "./Experience.jsx";
 
 function App() {
+  // Falling speed
+  const [speed, setSpeed] = useState(1);
   return (
     <>
       <Canvas
-        shadows
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 200,
-          position: [4, 2, 6],
-        }}
+        gl={{ antialias: false }}
+        dpr={[1, 1.5]}
+        camera={{ near: 0.01, far: 110, fov: 30 }}
       >
+        {/* Background color */}
+        <color attach="background" args={["#ffddd2"]} />
+
         {/* Performance */}
         <Perf position="top-left" />
 
-        {/* Controls */}
-        <OrbitControls />
-
         {/* Lights */}
         <ambientLight />
-        <pointLight position={[10, 10, 10]} />
+        <spotLight position={[10, 10, 10]} intensity={1} />
 
         {/* Experience */}
         <Suspense fallback={null}>
-          <Experience />
+          <Experience speed={speed} />
         </Suspense>
       </Canvas>
       ;

@@ -1,10 +1,32 @@
-function Experience() {
+// PostProcessing
+import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
+
+// Drei helpers
+import { Environment } from "@react-three/drei";
+
+// Rose
+import Rose from "./Rose";
+
+function Experience({ count = 100, depth = 80, speed }) {
   return (
     <>
-      <mesh rotation={[10, 15, 6]}>
-        <boxGeometry args={[2, 2, 2]} />
-        <meshStandardMaterial color="hotpink" />
-      </mesh>
+      {/* Environment */}
+      <Environment preset="sunset" />
+
+      {/* Roses */}
+      {Array.from({ length: count }, (_, i) => (
+        <Rose key={i} z={-(i / count) * depth - 20} speed={speed} />
+      ))}
+
+      {/* Effects */}
+      <EffectComposer multisampling={0}>
+        <DepthOfField
+          target={[0, 0, depth / 2]}
+          focalLength={0.5}
+          bokehScale={11}
+          height={700}
+        />
+      </EffectComposer>
     </>
   );
 }
