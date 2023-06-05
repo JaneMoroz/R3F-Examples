@@ -41,7 +41,7 @@ const Rose = ({ speed = 1, z }) => {
 
     // If rose goes to way down and disappear off the screen
     // Move it back to top
-    if (data.y < -height + height / 4) {
+    if (data.y < -height) {
       data.y = height;
     }
   });
