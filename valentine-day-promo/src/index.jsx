@@ -16,8 +16,6 @@ import "./style.css";
 import Experience from "./Experience.jsx";
 
 function App() {
-  // Falling speed
-  const [speed, setSpeed] = useState(1);
   return (
     <>
       <Canvas
@@ -26,7 +24,7 @@ function App() {
         camera={{ near: 0.01, far: 110, fov: 30 }}
       >
         {/* Background color */}
-        <color attach="background" args={["#ffddd2"]} />
+        <color attach="background" args={["#ffd2ee"]} />
 
         {/* Performance */}
         <Perf position="top-left" />
@@ -37,7 +35,7 @@ function App() {
 
         {/* Experience */}
         <Suspense fallback={null}>
-          <Experience speed={speed} />
+          <Experience speed={1} />
         </Suspense>
       </Canvas>
       ;

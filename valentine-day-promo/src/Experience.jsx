@@ -1,13 +1,13 @@
 // PostProcessing
-import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
+import { Effects } from "./PostProcessing/Effects";
 
 // Drei helpers
 import { Environment } from "@react-three/drei";
 
 // Rose
-import Rose from "./Rose";
+import Rose from "./Rose/Rose";
 
-function Experience({ count = 100, depth = 80, speed }) {
+function Experience({ count = 80, depth = 80, speed }) {
   return (
     <>
       {/* Environment */}
@@ -19,14 +19,7 @@ function Experience({ count = 100, depth = 80, speed }) {
       ))}
 
       {/* Effects */}
-      <EffectComposer multisampling={0}>
-        <DepthOfField
-          target={[0, 0, depth / 2]}
-          focalLength={0.5}
-          bokehScale={11}
-          height={700}
-        />
-      </EffectComposer>
+      <Effects depth={depth} />
     </>
   );
 }
