@@ -14,6 +14,7 @@ import "./style.css";
 
 // Components
 import Experience from "./Experience.jsx";
+import Overlay from "./Overlay/Overlay";
 
 function App() {
   return (
@@ -38,7 +39,9 @@ function App() {
           <Experience speed={1} />
         </Suspense>
       </Canvas>
-      ;
+
+      {/* Overlay */}
+      <Overlay />
     </>
   );
 }
