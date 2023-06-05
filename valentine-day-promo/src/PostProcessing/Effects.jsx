@@ -4,6 +4,7 @@ import {
   LUT,
   Vignette,
   DepthOfField,
+  BrightnessContrast,
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import { KTX2Loader } from "three/examples/jsm/loaders/KTX2Loader";
@@ -37,6 +38,10 @@ export function Effects({ depth }) {
         focalLength={0.5}
         bokehScale={11}
         height={700}
+      />
+      <BrightnessContrast
+        brightness={-0.5} // brightness. min: -1, max: 1
+        contrast={-0.5} // contrast: min -1, max: 1
       />
     </EffectComposer>
   );
