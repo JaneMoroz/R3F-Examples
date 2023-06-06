@@ -11,7 +11,7 @@ function Experience({ count = 80, depth = 80, speed }) {
   return (
     <>
       {/* Environment */}
-      <Environment preset="sunset" />
+      {/* <Environment preset="sunset" /> */}
 
       {/* Roses */}
       {Array.from({ length: count }, (_, i) => (
