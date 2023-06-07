@@ -40,6 +40,7 @@ const Mobile = () => {
           <Messages>
             {messages.map((msg, index) => (
               <Message
+                key={index}
                 right={msg.side === "right"}
                 left={msg.side === "left"}
                 img={msg.side === "img"}
