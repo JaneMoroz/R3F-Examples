@@ -14,7 +14,7 @@ import "./style.css";
 
 // Components
 import Experience from "./Experience.jsx";
-import Overlay from "./Overlay/Overlay";
+import Overlay from "./components/Overlay/Overlay";
 
 function App() {
   return (

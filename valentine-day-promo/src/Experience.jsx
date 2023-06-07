@@ -1,11 +1,11 @@
 // PostProcessing
-import { Effects } from "./PostProcessing/Effects";
+import { Effects } from "./components/PostProcessing/Effects";
 
 // Drei helpers
 import { Environment } from "@react-three/drei";
 
 // Rose
-import Rose from "./Rose/Rose";
+import Rose from "./components/Rose/Rose";
 
 function Experience({ count = 80, depth = 80, speed }) {
   return (
