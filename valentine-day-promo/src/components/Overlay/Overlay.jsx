@@ -4,7 +4,7 @@ import React from "react";
 import Mobile from "./Mobile";
 
 // Styled Components
-import { Container, Title, List, Text } from "./styles";
+import { Container, Title, List, Text } from "../../styles/globalStyles";
 
 const Overlay = () => {
   return (

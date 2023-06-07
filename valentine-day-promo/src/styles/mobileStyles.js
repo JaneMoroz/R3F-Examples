@@ -1,66 +1,10 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  font-family: "Rubik", sans-serif;
-  color: #ffffff;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: -50%;
-    transform: translateX(50%);
-    height: 100%;
-    width: 50%;
-    border-radius: 250px;
-    background: rgba(190, 186, 191, 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    /* box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.125); */
-  }
-`;
-
-export const Text = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem 4rem;
-  z-index: 2;
-`;
-
-export const Title = styled.div`
-  font-family: "Raleway", sans-serif;
-  & h1 {
-    font-size: 6rem;
-    font-weight: 800;
-  }
-`;
-
-export const List = styled.ul`
-  font-family: "Raleway", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  list-style: none;
-
-  & li {
-    padding: 2px;
-  }
-`;
-
 export const MobileOuter = styled.div`
   justify-self: center;
   align-self: center;
-  height: 830px;
-  width: 450px;
-  /* background: rgba(190, 186, 191, 0.65); */
+  height: 670px;
+  width: 370px;
   background: rgb(227, 227, 227);
   background: linear-gradient(
     145deg,
@@ -72,6 +16,7 @@ export const MobileOuter = styled.div`
   border-radius: 61px;
   border: 1px solid rgba(256, 256, 256, 0.28);
   padding: 1rem;
+  margin: 1rem 0;
 `;
 
 export const MobileInner = styled.div`
@@ -79,7 +24,6 @@ export const MobileInner = styled.div`
   grid-template-rows: 110px 1fr;
   height: 100%;
   width: 100%;
-  /* background: rgba(190, 186, 191, 0.65); */
   background: rgb(232, 232, 232);
   background: linear-gradient(
     145deg,
@@ -99,7 +43,7 @@ export const Header = styled.div`
   background: rgba(190, 186, 191, 0.65);
   border-radius: 45px 45px 0 0;
   border: 1px solid rgba(256, 256, 256, 0.28);
-  padding: 2.5rem 2rem 1rem 2rem;
+  padding: 1rem 1.5rem 0 1.5rem;
 
   &::before {
     content: "";
@@ -108,13 +52,12 @@ export const Header = styled.div`
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 32px;
+    height: 24px;
     width: 180px;
     border-radius: 0 0 45px 45px;
     background: rgba(256, 256, 256, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    /* box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.125); */
   }
 `;
 
@@ -126,8 +69,8 @@ export const Account = styled.div`
   column-gap: 1rem;
 
   img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -163,13 +106,13 @@ export const Messages = styled.ul`
 
 export const Message = styled.li`
   max-width: 70%;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   line-height: 0.9rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 
   img {
-    height: 65px;
-    width: 65px;
+    height: 50px;
+    width: 50px;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -214,12 +157,12 @@ export const NewMessage = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 0.5rem;
-  height: 3.75rem;
+  height: 3rem;
   width: 100%;
   background: #ffffff;
   border-radius: 35px;
   color: #c5c9cc;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 
   span:nth-of-type(1) {
     padding-left: 1.5rem;
