@@ -31,8 +31,8 @@ function App() {
         <Perf position="top-left" />
 
         {/* Lights */}
-        <ambientLight />
-        <spotLight position={[10, 10, 10]} intensity={1} />
+        {/* <ambientLight />
+        <spotLight position={[10, 10, 10]} intensity={1} /> */}
 
         {/* Experience */}
         <Suspense fallback={null}>

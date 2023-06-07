@@ -16,7 +16,11 @@ export const MobileOuter = styled.div`
   border-radius: 61px;
   border: 1px solid rgba(256, 256, 256, 0.28);
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 1.5rem 1rem;
+
+  @media only screen and (max-width: 400px) {
+    width: 95%;
+  }
 `;
 
 export const MobileInner = styled.div`
