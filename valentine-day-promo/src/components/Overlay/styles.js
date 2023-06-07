@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   position: absolute;
@@ -129,6 +129,7 @@ export const Account = styled.div`
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    object-fit: cover;
   }
 
   div {
@@ -146,8 +147,91 @@ export const Account = styled.div`
   }
 `;
 
-export const Main = styled.div``;
+export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+`;
 
-export const Messages = styled.div``;
+export const Messages = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+`;
 
-export const NewMessage = styled.div``;
+export const Message = styled.li`
+  max-width: 70%;
+  font-size: 0.75rem;
+  line-height: 0.9rem;
+  padding: 1rem;
+
+  img {
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  ${(props) =>
+    props.left &&
+    css`
+      background: rgba(238, 229, 244, 0.7);
+      color: #9d8189;
+      border-radius: 10px 10px 10px 4px;
+    `}
+  ${(props) =>
+    props.right &&
+    css`
+      align-self: flex-end;
+      background: rgba(256, 256, 256, 1);
+      color: #a5a5a5;
+      border-radius: 10px 10px 4px 10px;
+    `}
+  ${(props) =>
+    props.price &&
+    css`
+      display: grid;
+      grid-template-columns: min-content 1fr min-content;
+      column-gap: 1rem;
+      align-items: center;
+      background: rgba(190, 186, 191, 0.65);
+      color: #ffffff;
+      border-radius: 10px 10px 10px 4px;
+    `}
+  ${(props) =>
+    props.img &&
+    css`
+      display: flex;
+      column-gap: 0.5rem;
+      padding: 0;
+    `}
+`;
+
+export const NewMessage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  height: 3.75rem;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 35px;
+  color: #c5c9cc;
+  font-size: 0.75rem;
+
+  span:nth-of-type(1) {
+    padding-left: 1.5rem;
+  }
+
+  span:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(190, 186, 191, 0.65);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+  }
+`;

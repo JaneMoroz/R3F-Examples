@@ -33,3 +33,34 @@ export function DotsIcon() {
     </svg>
   );
 }
+
+export function CircleIcon() {
+  return (
+    <svg
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="10.9718" cy="10.0289" r="9.5" stroke="white" />
+    </svg>
+  );
+}
+
+export function SendIcon() {
+  return (
+    <svg
+      width="12"
+      height="18"
+      viewBox="0 0 12 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.966879 0.730307C1.79135 -0.065768 3.08868 -0.127005 3.98589 0.546597L4.20136 0.730307L11.0627 7.35536C11.8872 8.15143 11.9506 9.40408 11.253 10.2704L11.0627 10.4784L4.20136 17.1035C3.30818 17.9659 1.86006 17.9659 0.966879 17.1035C0.142409 16.3074 0.0789881 15.0548 0.776617 14.1885L0.966879 13.9804L6.2092 8.9169L0.966879 3.85339C0.142409 3.05731 0.0789881 1.80467 0.776617 0.93835L0.966879 0.730307Z"
+        fill="white"
+      />
+    </svg>
+  );
+}
