@@ -56,3 +56,13 @@ export const List = styled.ul`
 `;
 
 export const MobileOuter = styled.div``;
+
+export const MobileInner = styled.div``;
+
+export const Header = styled.div``;
+
+export const Main = styled.div``;
+
+export const Messages = styled.div``;
+
+export const NewMessage = styled.div``;

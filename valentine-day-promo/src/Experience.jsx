@@ -14,12 +14,12 @@ function Experience({ count = 80, depth = 80, speed }) {
       {/* <Environment preset="sunset" /> */}
 
       {/* Roses */}
-      {Array.from({ length: count }, (_, i) => (
+      {/* {Array.from({ length: count }, (_, i) => (
         <Rose key={i} z={-(i / count) * depth - 20} speed={speed} />
-      ))}
+      ))} */}
 
       {/* Effects */}
-      <Effects depth={depth} />
+      {/* <Effects depth={depth} /> */}
     </>
   );
 }
