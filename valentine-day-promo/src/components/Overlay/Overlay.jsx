@@ -6,11 +6,36 @@ import Mobile from "./Mobile";
 // Styled Components
 import { Container, Title, List, Text } from "../../styles/globalStyles";
 
+// Animation
+const textVariant = {
+  hidden: {
+    x: -48,
+    opacity: 0,
+  },
+  show: { x: 0, opacity: 1, transition: { duration: 1 } },
+};
+
+const titleVariant = {
+  hidden: {
+    x: -48,
+    opacity: 0,
+  },
+  show: { x: 0, opacity: 1, transition: { duration: 1, delay: 1 } },
+};
+
+const listVariant = {
+  hidden: {
+    x: 48,
+    opacity: 0,
+  },
+  show: { x: 0, opacity: 1, transition: { duration: 1, delay: 1 } },
+};
+
 const Overlay = () => {
   return (
     <Container>
-      <Text>
-        <Title>
+      <Text variants={textVariant} initial="hidden" animate="show">
+        <Title variants={titleVariant} initial="hidden" animate="show">
           <h1>
             Ordering
             <br />
@@ -19,7 +44,7 @@ const Overlay = () => {
             is easy
           </h1>
         </Title>
-        <List>
+        <List variants={listVariant} initial="hidden" animate="show">
           <li>Roses</li>
           <li>Lilies</li>
           <li>Tulips</li>

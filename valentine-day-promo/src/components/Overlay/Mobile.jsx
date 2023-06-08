@@ -21,9 +21,18 @@ import accountImg from "../../assets/images/account.jpg";
 // Data
 import messages from "../../assets/data/messages";
 
+// Animation
+const mobileOuterVariant = {
+  hidden: {
+    x: 48,
+    opacity: 0,
+  },
+  show: { x: 0, opacity: 1, transition: { duration: 1, delay: 1 } },
+};
+
 const Mobile = () => {
   return (
-    <MobileOuter>
+    <MobileOuter variants={mobileOuterVariant} initial="hidden" animate="show">
       <MobileInner>
         <Header>
           <BackIcon />
@@ -45,6 +54,15 @@ const Mobile = () => {
                 left={msg.side === "left"}
                 img={msg.side === "img"}
                 price={msg.side === "price"}
+                initial={{
+                  y: 10,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                  transition: { duration: 0.5, delay: msg.delay },
+                }}
               >
                 {msg.message}
               </Message>
