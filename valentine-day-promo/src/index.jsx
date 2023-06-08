@@ -25,7 +25,7 @@ function App() {
         camera={{ near: 0.01, far: 110, fov: 30 }}
       >
         {/* Background color */}
-        <color attach="background" args={["#ffd2ee"]} />
+        <color attach="background" args={["#ffffff"]} />
 
         {/* Performance */}
         <Perf position="top-left" />

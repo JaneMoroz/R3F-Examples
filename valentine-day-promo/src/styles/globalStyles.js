@@ -46,7 +46,7 @@ export const Text = styled(motion.div)`
     height: 100%;
     width: 100%;
     border-radius: 250px;
-    background: rgba(190, 186, 191, 0.65);
+    background: rgba(190, 186, 191, 0.7);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 

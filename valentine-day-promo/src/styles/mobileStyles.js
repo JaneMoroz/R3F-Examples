@@ -9,8 +9,8 @@ export const MobileOuter = styled(motion.div)`
   background: rgb(227, 227, 227);
   background: linear-gradient(
     145deg,
-    rgba(227, 227, 227, 0.5) 0%,
-    rgba(221, 221, 221, 0.5) 100%
+    rgba(227, 227, 227, 0.6) 0%,
+    rgba(221, 221, 221, 0.6) 100%
   );
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);

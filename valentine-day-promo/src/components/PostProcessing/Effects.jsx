@@ -40,8 +40,8 @@ export function Effects({ depth }) {
         height={700}
       />
       <BrightnessContrast
-        brightness={0} // brightness. min: -1, max: 1
-        contrast={0} // contrast: min -1, max: 1
+        brightness={0.5} // brightness. min: -1, max: 1
+        contrast={-0.3} // contrast: min -1, max: 1
       />
     </EffectComposer>
   );
