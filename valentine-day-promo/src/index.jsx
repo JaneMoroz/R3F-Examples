@@ -28,7 +28,7 @@ function App() {
         <color attach="background" args={["#ffffff"]} />
 
         {/* Performance */}
-        <Perf position="top-left" />
+        {/* <Perf position="top-left" /> */}
 
         {/* Lights */}
         {/* <ambientLight />
