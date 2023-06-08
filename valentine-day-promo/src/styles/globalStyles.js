@@ -1,11 +1,10 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   font-family: "Rubik", sans-serif;
@@ -21,7 +20,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Text = styled.div`
+export const Text = styled(motion.div)`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -58,7 +57,7 @@ export const Text = styled.div`
   }
 `;
 
-export const Title = styled.div`
+export const Title = styled(motion.div)`
   font-family: "Raleway", sans-serif;
   z-index: 2;
   & h1 {
@@ -74,14 +73,13 @@ export const Title = styled.div`
     }
 
     @media only screen and (max-width: 760px) {
-      font-size: 3em;
+      font-size: 2.5rem;
       text-align: center;
-      margin-bottom: 1rem;
     }
   }
 `;
 
-export const List = styled.ul`
+export const List = styled(motion.ul)`
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -92,9 +90,6 @@ export const List = styled.ul`
   }
 
   @media only screen and (max-width: 760px) {
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    column-gap: 5px;
+    display: none;
   }
 `;

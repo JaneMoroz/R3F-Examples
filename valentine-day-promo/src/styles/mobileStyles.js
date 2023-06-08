@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
-export const MobileOuter = styled.div`
+export const MobileOuter = styled(motion.div)`
   justify-self: center;
   align-self: center;
   height: 670px;
@@ -17,6 +18,7 @@ export const MobileOuter = styled.div`
   border: 1px solid rgba(256, 256, 256, 0.28);
   padding: 1rem;
   margin: 1.5rem 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
 
   @media only screen and (max-width: 400px) {
     width: 95%;
@@ -108,7 +110,7 @@ export const Messages = styled.ul`
   row-gap: 0.6rem;
 `;
 
-export const Message = styled.li`
+export const Message = styled(motion.li)`
   max-width: 70%;
   font-size: 0.7rem;
   line-height: 0.9rem;
@@ -177,8 +179,8 @@ export const NewMessage = styled.div`
     align-items: center;
     justify-content: center;
     background: rgba(190, 186, 191, 0.65);
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
   }
 `;
