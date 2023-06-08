@@ -52,7 +52,7 @@ export const Text = styled(motion.div)`
 
     @media only screen and (max-width: 760px) {
       border-radius: 100px 100px 0 0;
-      transform: translateY(20%);
+      transform: translateY(0);
     }
   }
 `;
