@@ -8,10 +8,10 @@
     <a href="https://github.com/JaneMoroz/R3F-Examples/tree/main/valentine-day-promo">
       Repository
     </a>
-    <span> | </span>
-    <a href="https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY">
+<!--     <span> | </span> -->
+<!--     <a href="https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY">
       Challenge
-    </a>
+    </a> -->
   </h3>
 </div>
 <div align="center">
